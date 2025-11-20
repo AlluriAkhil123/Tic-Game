@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="Tic.css">
+</head>
+<body>
+  <div class="wrap">
+    <main class="game" role="application" aria-label="Tic Tac Toe game">
+      <header>
+        <h1><span class="logo" aria-hidden>TTT</span>Tic-Tac-Toe</h1>
+      </header>
+
+      <div class="scoreboard">
+        <div class="score">
+          <div class="item">X: <strong id="xScore">0</strong></div>
+          <div class="item">O: <strong id="oScore">0</strong></div>
+          <div class="item">Ties: <strong id="tieScore">0</strong></div>
+        </div>
+        <div class="item turn">Turn: <strong id="currentPlayer">X</strong></div>
+      </div>
+
+      <div id="status" class="status">Tap any cell to start</div>
+
+      <div id="board" class="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+      </div>
+
+      <div class="controls">
+        <button id="undoBtn" class="btn" disabled>Undo</button>
+        <button id="resetBtn" class="btn">Reset Board</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Result overlay -->
+  <div id="resultOverlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 id="resultMessage"></h2>
+      <button id="newGameBtn" class="primary">New Game</button>
+    </div>
+  </div>
+
+  <script src="Tic.js" defer></script>
+</body>
+</html>
